@@ -33,6 +33,7 @@ namespace Boardz.Id
             services.AddIdentityServer(options =>
                 {
                     options.PublicOrigin = "https";
+                    options.IssuerUri = "https://boardz-id.azurewebsites.net";
                 })
                 .AddTestUsers(InMemory.GetUsers())
                 .AddInMemoryClients(InMemory.GetClients())

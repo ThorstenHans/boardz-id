@@ -19,14 +19,7 @@ namespace Boardz.Id
             var host = new WebHostBuilder()
                 .UseApplicationInsights()
                 .CaptureStartupErrors(true)
-                .UseKestrel(options =>
-                {
-                    options.Listen(IPAddress.Any, 443, cfg =>
-                    {
-                        cfg.UseHttps(Path.Combine(Directory.GetCurrentDirectory(), "Config", "certificate.pfx"), config.GetValue<string>("HostingCertPassword"));
-                    });
-                   
-                })
+                .UseKestrel()
                 .UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
