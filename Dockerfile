@@ -12,5 +12,5 @@ RUN dotnet publish -c Release -o out
 FROM microsoft/aspnetcore:2.0.0
 WORKDIR /app
 COPY --from=build-environment /app/out/ ./
-EXPOSE 80
+EXPOSE 443
 ENTRYPOINT ["dotnet", "Demo.IdentityServer.dll"]
