@@ -12,5 +12,5 @@ RUN dotnet publish -c Release -o out Boardz.Id.csproj
 FROM microsoft/aspnetcore:2.0.0
 WORKDIR /app
 COPY --from=build-environment /app/out/ ./
-EXPOSE 5000
+EXPOSE 443
 ENTRYPOINT ["dotnet", "Boardz.Id.dll"]
