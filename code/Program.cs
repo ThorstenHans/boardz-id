@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using Demo.IdentityServer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
