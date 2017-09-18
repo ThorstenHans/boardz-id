@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Net;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
@@ -18,7 +19,14 @@ namespace Boardz.Id
             var host = new WebHostBuilder()
                 .UseApplicationInsights()
                 .CaptureStartupErrors(true)
-                .UseKestrel()
+                .UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Any, 443, cfg =>
+                    {
+                        cfg.UseHttps(Path.Combine(Directory.GetCurrentDirectory(), "Config", "certificate.pfx"), config.GetValue<string>("HostingCertPassword"));
+                    });
+                   
+                })
                 .UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
