@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/a0771ac5-e865-4b95-8e56-14d2499bb0e1/resourcegroups/prod/providers/microsoft.insights/components/boardz-ai</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/a0771ac5-e865-4b95-8e56-14d2499bb0e1/resourcegroups/prod/providers/microsoft.insights/components/boardz-ai</ApplicationInsightsAnnotationResourceId>
+    <UserSecretsId>05ffe4f1-1edd-43bd-8b7d-a66b6f7dd126</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="2.0.0-preview3" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+</Project>

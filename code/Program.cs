@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using System.IO;
+using Demo.IdentityServer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
-namespace Demo.IdentityServer
+namespace Boardz.Id
 {
     public class Program
     {
@@ -22,6 +17,7 @@ namespace Demo.IdentityServer
             .Build();
 
             var host = new WebHostBuilder()
+                .UseApplicationInsights()
                 .CaptureStartupErrors(true)
                 .UseKestrel()
                 .UseConfiguration(config)

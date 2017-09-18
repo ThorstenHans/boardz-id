@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
 
-namespace Demo.IdentityServer.Config
+namespace Boardz.Id.Config
 {
     public class InMemory
     {

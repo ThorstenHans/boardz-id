@@ -13,4 +13,4 @@ FROM microsoft/aspnetcore:2.0.0
 WORKDIR /app
 COPY --from=build-environment /app/out/ ./
 EXPOSE 443
-ENTRYPOINT ["dotnet", "Demo.IdentityServer.dll"]
+ENTRYPOINT ["dotnet", "Boardz.Id.dll"]
