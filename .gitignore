@@ -1,0 +1,9 @@
+**/.idea/
+**/.vscode/
+**/.vs/
+**/packages/
+**/bin/
+**/obj/
+.DS_Store
+**/*.user
+docker.env
